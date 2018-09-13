@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Show</title>
+    <style>
+        h3 {
+            display: inline-block;
+        }
+        h4#home {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h3><%= birds.name%>'s Page</h3> <a href="/"><h4 id="home">Home</h4></a>
+    <h4>Breed: <%= birds.breed%></h4>
+    <h4>Color: <%= birds.color%></h4>
+    <a href="/birds/edit/<%=birds._id%>"><h4>Edit</h4></a>
+    <a href="/delete/<%=birds._id%>"><h4>Delete</h4></a>
+</body>
+</html>

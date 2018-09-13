@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h3>All Birds</h3>
+    <% for (x in birds) { %>
+        <div id="box">
+            <h4>Name: <%= birds[x].name%></h4>
+            <h4>Breed: <%= birds[x].breed%></h4>
+            <h4>Color: <%= birds[x].color%></h4>
+            <a href="birds/<%= birds[x]._id%>"><h4>Show</h4></a>
+        </div>
+    <% } %>
+    <a href="/birds/new">Add a new bird</a>
+</body>
+</html>

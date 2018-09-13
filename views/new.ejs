@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>New</title>
+    <style>
+        h3 {
+            display: inline-block;
+        }
+        h4#home {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        h4#flash {
+            color: red;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h3>Create a new Bird</h3><a href="/"><h4 id="home">Home</h4></a>
+    <h4 id="flash"><%= messages.registration %></h4>
+    <form action="/birds" method="POST">
+        Name: <input type="text" name="name"><br>
+        Breed: <input type="text" name="breed"><br>
+        Color: <input type="text" name="color"><br>
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>

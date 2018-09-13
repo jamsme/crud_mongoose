@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit</title>
+    <style>
+    h3, h4#home {
+        display: inline-block;
+
+    }
+    a {
+        text-decoration: none;
+    }
+    </style>
+<body>
+    <h3>Edit <%= birds.name%></h3> <a href="/"><h4 id="home">Home</h4></a>
+    <form action="/edit/<%=birds._id%>" method="POST">
+        Name: <input type="text" name="name" value="<%= birds.name%>"><br>
+        Breed: <input type="text" name="breed" value="<%= birds.breed%>"><br>
+        Color: <input type="text" name="color" value="<%= birds.color%>"><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
